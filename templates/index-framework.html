@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: blob: 'unsafe-eval' 'unsafe-inline';">
+  <title><%= name %></title>
+
+  <!-- build:css(.) css/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js(.) js/ie.js -->
+  <!--[if lte IE 9]>
+    <script src="bower_components/console-polyfill/index.js"></script>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/es5-shim/es5-sham.js"></script>
+    <script src="bower_components/respond/dest/respond.src.js"></script>
+  <![endif]-->
+  <!-- endbuild -->
+
+  <!-- build:less css/app.css -->
+  <link rel="stylesheet/less" href="app-framework.less" />
+  <!-- endbuild -->
+
+  <!-- build:remove -->
+  <script src="bower_components/less/dist/less.js"></script>
+  <!-- endbuild -->
+</head>
+<body ng-app="<%= main %>">
+  <ng-view autoscroll></ng-view>
+  <ui-view autoscroll></ui-view>
+
+  <!-- build:js(.) js/vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({app,.tmp/generated}) js/app.js -->
+  <!-- include: "type": "js", "files": "**/*.urgent.js" -->
+  <!-- include: "type": "js", "files": ["**/*.js", "!**/*.urgent.js"] -->
+  <!-- endbuild -->
+
+  <!-- templates -->
+</body>
+</html>
